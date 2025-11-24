@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Modern Landing Page with Pricing" />
+    <title>Acme - Modern Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: 'hsl(222.2 84% 4.9%)',
+              foreground: 'hsl(210 40% 98%)',
+              primary: 'hsl(217.2 91.2% 59.8%)',
+              'primary-foreground': 'hsl(222.2 47.4% 11.2%)',
+            },
+            animation: {
+              'fade-in': 'fade-in 0.5s ease-out forwards',
+              'slide-up': 'slide-up 0.5s ease-out forwards'
+            },
+            keyframes: {
+              'fade-in': {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' }
+              },
+              'slide-up': {
+                '0%': { transform: 'translateY(20px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' }
+              }
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-background text-foreground">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
